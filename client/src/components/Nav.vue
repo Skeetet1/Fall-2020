@@ -4,20 +4,20 @@
 
 
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar container is-fixed-top is-black" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="../assets/logo.png"  height="28">
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" :class="{'is-active': isActive}" @click='isActive = !isActive'  aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': isActive}">
     <div class="navbar-start">
     
 
@@ -50,12 +50,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light">
+         
+        <router-link to="/login" class="button is-light">
             Log in
-          </a>
+        </router-link>
         </div>
       </div>
     </div>
@@ -67,7 +68,12 @@
 
 <script>
 export default {
+data:()=>({
+  isActive: false
+}),
+methods:{
 
+}
 }
 </script>
 
