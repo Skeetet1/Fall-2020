@@ -2,9 +2,29 @@
   <form>
   
 <div class="field">
+                   <label class="label">First Name</label>
+                  <div class="control has-icons-left has-icons-right">
+                     <input class="input is-success" type="text" placeholder="First Name" >
+                     <span class="icon is-small is-left">
+                     <i class="fa fa-user-tag"></i>
+                     </span>
+                     <span class="icon is-small is-right">
+                     <i class=""></i>
+                     </span>
+
+                     <label class="label">Last Name</label>
+                  <div class="control has-icons-left has-icons-right">
+                     <input class="input is-success" type="text" placeholder="Last Name" >
+                     <span class="icon is-small is-left">
+                     <i class="fa fa-user-tag"></i>
+                     </span>
+                     <span class="icon is-small is-right">
+                     <i class=""></i>
+                     </span>
+
                   <label class="label">Username</label>
                   <div class="control has-icons-left has-icons-right">
-                     <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                     <input class="input is-success" type="text" placeholder="Username" >
                      <span class="icon is-small is-left">
                      <i class="fa fa-user"></i>
                      </span>
@@ -17,15 +37,15 @@
                <div class="field">
                   <label class="label">Email</label>
                   <div class="control has-icons-left has-icons-right">
-                     <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                     <input class="input is-success" type="email" placeholder="Email input" value="hello@">
                      <span class="icon is-small is-left">
                      <i class="fa fa-envelope"></i>
                      </span>
                      <span class="icon is-small is-right">
-                     <i class="fa fa-warning"></i>
+                     <i class="fa fa-check"></i>
                      </span>
                   </div>
-                  <p class="help is-danger">This email is invalid</p>
+                  <p class="help is-success">This email is available</p>
                </div>
                <div class="field">
                   <label class="label">Phone</label>
