@@ -23,6 +23,7 @@
 
       <router-link to="/" class="navbar-item">Home</router-link> 
       <router-link to="/about" class="navbar-item">About</router-link>
+      <router-link to="/workouts" class="navbar-item">WorkOuts</router-link>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -70,6 +71,7 @@
 </template>
 
 <script>
+
 export default {
 data:()=>({
   isActive: false
