@@ -68,6 +68,7 @@ text-align: center;
 }
 
 .panel{
-position:absolute
+position:relative;
+right:-100px;
 }
 </style>

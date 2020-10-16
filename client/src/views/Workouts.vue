@@ -2,7 +2,7 @@
 <div class= "page">
       <div class= "columns">
             <div class="column is-two-thirds">
-             <h3> Work Out Images</h3>
+             <WorkOutSlider/>
             </div>
             <div class="column is-one-quarter">
               <WorkOutCols/>
@@ -14,10 +14,10 @@
 
 <script>
 import WorkOutCols from "@/components/WorkOutCols";
-
+import WorkOutSlider from "@/components/WorkOutSlider";
 export default {
 components:{
-  WorkOutCols
+  WorkOutCols,WorkOutSlider
 }
 }
 </script>
