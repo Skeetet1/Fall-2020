@@ -21,9 +21,10 @@
     <div class="navbar-start">
     
 
-      <router-link to="/" class="navbar-item">Home</router-link> 
+      <router-link to="/home" class="navbar-item">  Home </router-link> 
       <router-link to="/about" class="navbar-item">About</router-link>
       <router-link to="/workouts" class="navbar-item">WorkOuts</router-link>
+      <router-link to="/friends" class="navbar-item">Friends</router-link>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
