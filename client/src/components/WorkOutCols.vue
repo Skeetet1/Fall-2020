@@ -1,6 +1,5 @@
 <template>
   
-
 <nav class="panel">
   <p class="panel-heading">
    Select Body Part
@@ -49,11 +48,8 @@
       </span>
    Calfs
   </a>
-  
+
 </nav>
-
-  
-
 </template>
 
 <script>

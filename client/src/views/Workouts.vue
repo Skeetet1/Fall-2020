@@ -15,9 +15,10 @@
 <script>
 import WorkOutCols from "@/components/WorkOutCols";
 import WorkOutSlider from "@/components/WorkOutSlider";
+
 export default {
 components:{
-  WorkOutCols,WorkOutSlider
+  WorkOutCols,WorkOutSlider,
 }
 }
 </script>

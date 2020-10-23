@@ -21,7 +21,7 @@
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
+    <button class="button is-success" @click="login">
       Login
     </button>
   </p>
@@ -30,8 +30,20 @@
 </template>
 
 <script>
+import session from "@/models/session";
 export default {
+methods:{
+login(){
 
+  session.user={
+      name:"Tevin",
+      handle:"tevLyon",
+      profile:"",
+
+  }
+}
+
+}
 }
 </script>
 
