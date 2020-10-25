@@ -3,14 +3,16 @@
 
 const data = [{name: 'Tevin', age: 23}, {name:'Ayman',age:20}]
 
-function getAll(){
+ async function getAll(){
+  // await Promise.resolve()
+  console.log("Called Get All")
   return data;
 
 }
 
-  function add(name, age){
+ async function add(name, age){
     data.push({name,age});
   } 
 
 
-  module.exports ={ getAll,add, search: q=> data.filter(x=> x.name ==q)}
+  module.exports ={ getAll,add, search: async q=> data.filter(x=> x.name ==q)}
