@@ -1,11 +1,22 @@
 <template>
-<v-flex class= "mt-4 mb-3" >
-  <Popup/>
-</v-flex>
 
+
+
+
+<h1 class="headings">Welcome To Skeete's Fitness App </h1>
 
 </template>
 
+<style>
+.headings{
+  text-align: center;
+  color:red;
+  font-size: 30px;
+  font-family: ;
+}
+</style>
+
+</style>
 <script>
 // @ is an alias to /src
 
