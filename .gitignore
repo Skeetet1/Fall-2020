@@ -67,6 +67,10 @@ typings/
 # Optional REPL history
 .node_repl_history
 
+
+#dotemv environment variable file
+.env
+.env.test
 # Output of 'npm pack'
 *.tgz
 

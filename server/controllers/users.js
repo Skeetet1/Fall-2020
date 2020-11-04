@@ -20,4 +20,10 @@ users.search(req.query).then(x=> res.send(x) )
 
 })
 
+.get('/rand', (req,res, next) => {
+  users.rand()
+  .then(someVal => res.send({someVal}))
+  .catch(next);
+})
+
 module.exports = router;

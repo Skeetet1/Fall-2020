@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.17.1",
-    "vuetify": "^2.3.14"
+    "vuetify": "^2.3.14",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
