@@ -14,10 +14,10 @@ data(){
   return{
     items: [
           {
-          //  src: 'https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14034811_1782208738735042_2893354851055862203_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=yl8zEE8Dx4AAX_Ar08l&_nc_ht=scontent-lga3-1.xx&oh=0afc8550ed4e7e7ff45bc5507ad8601f&oe=5FAFD63A',
+            src: 'https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/curlsthor3.gif?crop=1xw:1xh;center,top&resize=480:*',
           },
           {
-           // src: 'http://cs.newpaltz.edu/~dosreist/changcheng.png',
+            src: 'https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/curlszottman.gif?crop=1xw:1xh;center,top&resize=480:*',
           },
           {
             src: 'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/nphawks.com/images/2020/1/24/AT7I1951.jpg',
