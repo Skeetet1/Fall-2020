@@ -27,22 +27,13 @@
       <router-link to="/friends" class="navbar-item">Friends</router-link>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Admin
-        </a>
+<a class="navbar-link">Admin</a>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Users
-          </a>
-          
-          <a class="navbar-item">
-            Contact
-          </a>
-         
-        </div>
-      </div>
-    </div>
+<div class="navbar-dropdown">
+<router-link to="/users" class="navbar-item">Users</router-link>
+</div>
+</div>
+</div>
 
     <div class="navbar-end">
       <div class="navbar-item">
