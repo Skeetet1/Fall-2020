@@ -10,10 +10,11 @@ import session from '../models/session'
 
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', name: 'Home',component: Home},
+  { path: '/home', name: 'Home',component: Home},
   { path: '/login', name: 'Login',component: Login},
   { path: '/signup', name: 'SignUp',component: SignUp},
   { path: '/workouts', name: 'Workouts',component: Workouts},

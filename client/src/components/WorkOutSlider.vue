@@ -1,4 +1,5 @@
 <template>
+<div class= position>
   <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="(item,i) in items"
@@ -6,6 +7,8 @@
       :src="item.src"
     ></v-carousel-item>
   </v-carousel>
+
+</div>
 </template>
 
 <script>
@@ -32,5 +35,7 @@ data(){
 </script>
 
 <style>
-
+.position{
+  margin-top: 100px;
+}
 </style>

@@ -64,6 +64,7 @@ text-align: center;
 }
 
 .panel{
+ margin-top: 40px; 
 position:relative;
 right:-100px;
 }

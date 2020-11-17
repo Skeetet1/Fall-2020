@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="home">
       <Nav />
       <div class="container">
           <Notifications /> 
@@ -19,4 +19,5 @@ export default {
 </script>
 
 <style lang="scss">
+
 </style>
