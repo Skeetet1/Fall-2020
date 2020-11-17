@@ -1,7 +1,4 @@
 <template>
-  
-
-
 
 
 <nav class="navbar container is-fixed-top is-black" role="navigation" aria-label="main navigation">

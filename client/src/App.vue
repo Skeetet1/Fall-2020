@@ -1,23 +1,22 @@
 <template>
-<section class="section">
-<div class="container">
-<Nav />
-<router-view/>
-
-</div>
-</section>
+  <div class="">
+      <Nav />
+      <div class="container">
+          <Notifications /> 
+          <router-view/>
+      </div>
+  </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
-
+import Notifications from "@/components/Notifications";
 export default {
-components: {
-Nav
-}
+    components: {
+        Nav, Notifications
+    }
 }
 </script>
 
 <style lang="scss">
-
 </style>

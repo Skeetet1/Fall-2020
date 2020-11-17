@@ -5,8 +5,8 @@ import Login from '../views/Login.vue'
 import SignUp from '../views/SignUp.vue'
 import Workouts from '../views/Workouts.vue'
 import Friends from '../views/Friends.vue'
-import Users from'../'
-
+import Users from'../views/Users.vue'
+import session from '../models/session'
 
 
 
@@ -45,3 +45,12 @@ const router = new VueRouter({
 
 
 export default router
+
+
+function checkSessionUser (to, from, next) {
+  if(session.user){
+    next();
+  }else{
+    next('Login');
+  }
+}

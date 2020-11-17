@@ -10,9 +10,9 @@
 <style>
 .headings{
   text-align: center;
-  color:red;
+  color:blue;
   font-size: 30px;
-  font-family: ;
+
 }
 </style>
 
