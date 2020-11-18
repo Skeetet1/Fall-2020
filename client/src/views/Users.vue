@@ -51,4 +51,8 @@ export default {
 </script>
 
 <style>
+
+.page {
+    margin-top: 30px;
+}
 </style>

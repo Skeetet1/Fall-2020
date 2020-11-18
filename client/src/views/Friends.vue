@@ -1,101 +1,218 @@
 <template>
 <form>
-  <div>
-    <transition-group name='fade' tag='div'>
-      <div v-for="i in [currentIndex]" :key='i'>
-        <img :src="currentImg" />
-      </div>
-    </transition-group>
-    <a class="prev" @click="prev" href='#'>&#10094;</a>
-  <a class="next" @click="next" href='#'>&#10095;</a>
-  </div>
+  <v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      scrollable
+      max-width="300px"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Exercise Selector
+        </v-btn>
+      </template>
+      <v-card>
+        <v-card-title>Select Exercises for Today</v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="height: 300px;">
+          <v-radio-group
+            v-model="dialogm1"
+            column
+          >
+            <v-radio
+              label="Lunges"
+              value="lunges"
+            ></v-radio>
+            <v-radio
+              label="Pushups"
+              value="pushups"
+            ></v-radio>
+            <v-radio
+              label="Squats"
+              value="squats"
+            ></v-radio>
+            <v-radio
+              label="Standing overhead dumbbell presses"
+              value="standing-overhead-dumbbell-presses"
+            ></v-radio>
+            <v-radio
+              label="Dumbbell rows"
+              value="dumbell-rows"
+            ></v-radio>
+            <v-radio
+              label="Single-leg deadlifts"
+              value="single-leg-deadlifts"
+            ></v-radio>
+            <v-radio
+              label="Burpees"
+              value="burpees"
+            ></v-radio>
+            <v-radio
+              label="Side planks"
+              value="side-planks"
+            ></v-radio>
+            <v-radio
+              label="Planks"
+              value="planks"
+            ></v-radio>
+            <v-radio
+              label="Glute bridge"
+              value="glute-bridge"
+            ></v-radio>
+          </v-radio-group>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+          >
+            Save
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </v-row>
+  <div class="field has-addons">
+  <div class="control is-expanded">
+    <div class="select is-fullwidth">
+      <select name="exercise_types">
+        <option value="empty"></option>
 
+          <option value="empty"></option>
+        <option value="pushup">Push-Up</option>
+         <option value="triceps_dips">Triceps Dips</option>
+         <option value="pullup">Pull-Up</option>
+
+        <option value="squat">Squat</option>
+         <option value="lunges">Lunges</option>
+         <option value="single_leg_squat">Single-Leg Squat</option>
+
+         <option value="Crunches">Crunches</option>
+         <option value="V-ups">V-ups</option>
+         <option value="Russian Twists">Russian Twists</option>
+         <option value="side_bridge">Side Bridge</option>
+
+        <option value="Cleans">Cleans</option>
+        <option value="swiss_ball_hamstring_curl">Swiss Ball Hamstring Curl</option>
+
+        <option value="lateral_shoulder_raise">Lateral Shoulder Raise</option>
+      </select>
+    </div>
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-primary">Choose</button>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Monday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Tuesday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Wednesday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Thursday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Friday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Saturday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Sunday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+
+
+
+
+
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox">
+      I completed the exercises and gave it my all
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control">
+    <label class="radio">
+      <input type="radio" name="question">
+      Ahead of Schedule
+    </label>
+    <label class="radio">
+      <input type="radio" name="question">
+      On Track
+    </label>
+    <label class="radio">
+      <input type="radio" name="question">
+      Feeling Behind
+    </label>
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link">Add to Log</button>
+  </div>
  
-  </form>
+</div>
+</form>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  data() {
-    return {
-      images: [
-        'https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/curlsthor3.gif?crop=1xw:1xh;center,top&resize=480:*',
-        'https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/curlszottman.gif?crop=1xw:1xh;center,top&resize=480:*',
-        'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/nphawks.com/images/2020/3/4/DSC_0154.JPG',
-        ],
-      timer: null,
-      currentIndex: 0,
-    }
-  },
-  
-    mounted: function() {
-      this.startSlide();
-    },
-  
-    methods: {
-      startSlide: function() {
-        this.timer = setInterval(this.next, 4000);
-      },
-  
-  
-      next: function() {
-        this.currentIndex += 1
-      },
-      prev: function() {
-        this.currentIndex -= 1
+  export default {
+    data () {
+      return {
+        dialogm1: '',
+        dialog: false,
       }
     },
-  
-    computed: {
-      currentImg: function() {
-        return this.images[Math.abs(this.currentIndex) % this.images.length];
-      }
-    }
-  
-}
+  }
 </script>
 
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.9s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width:100%;
-  opacity: 1;
-}
-.fade-enter,
-.fade-leave-to {
-  visibility: hidden;
-  width:100%;
-  opacity: 0;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-}
-.prev {
-  left: 0;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.9);
-}
+    form{
+        margin-top: 30px;
+    }
 </style>
