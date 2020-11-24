@@ -9,6 +9,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.14.0",
     "buefy": "0.9.3",
+    "bulma-calendar": "^6.0.9",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
