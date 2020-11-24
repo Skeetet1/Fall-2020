@@ -1,7 +1,7 @@
 <template>
   <div class="page">
       <h2 class="title is-2">Users Page</h2>
-
+ 
         <table class="table is-narrow is-hoverable is-fullwidth">
             <thead><tr>
                 <th>id</th>
