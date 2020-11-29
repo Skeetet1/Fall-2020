@@ -11,13 +11,26 @@ import session from '../models/session'
 
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/home', name: 'Home',component: Home},
+  { path: "/", 
+  name: "Home",
+  component: Home,
+
+},
+
   { path: '/login', name: 'Login',component: Login},
   { path: '/signup', name: 'SignUp',component: SignUp},
-  { path: '/workouts', name: 'Workouts',component: Workouts},
+
+
+  { path: '/workouts', name: 'Workouts',component: Workouts,
+
+},
+
+
+
   { path: '/friends', name: 'Friends',component: Friends},
 
   {path: '/users', name: 'Users',
@@ -55,3 +68,4 @@ function checkSessionUser (to, from, next) {
     next('Login');
   }
 }
+
