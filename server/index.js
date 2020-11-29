@@ -3,11 +3,8 @@ const path = require('path');
 require('dotenv').config();
 
 const users = require('./controllers/users');
-const Workouts = require('./controllers/Workouts');
 const comments = require('./controllers/comments');
 const reactions = require('./controllers/reactions');
-const friends = require('./controllers/friends');
-const following = require('./controllers/following');
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -19,11 +16,11 @@ app.use(express.json());
 app.use('/public',express.static( __dirname + '/public/'))
 app.use(express.static( __dirname + '/../docs/'))
 
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-
 });
 
 //  Authentication
@@ -41,11 +38,9 @@ app.get('/hello', (req, res, next) => {
 })
 
 app.use('/users', users);
-app.use('/Workouts', Workouts);
+
 app.use('/comments', comments);
 app.use('/reactions', reactions);
-app.use('/friends',friends);
-app.use('/following',following);
 
 app.get('*', (req, res, next) => {
     const filename = path.join(__dirname, '/../docs/index.html');
