@@ -4,7 +4,7 @@
 <nav class="navbar container is-fixed-top is-black" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="">
-        <img src="../assets/logow.png" />
+        <img src="../assets/logo.png" />
     </a>
 
     <a role="button" class="navbar-burger burger" :class="{'is-active': isActive}" @click='isActive = !isActive'  aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
