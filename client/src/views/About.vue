@@ -42,7 +42,8 @@ export default {
         "https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/nphawks.com/images/2020/1/24/AT7I1951.jpg " ,
         "https://images.pexels.com/photos/4720303/pexels-photo-4720303.jpeg?cs=srgb&dl=pexels-ketut-subiyanto-4720303.jpg&fm=jpg",
         "https://images.pexels.com/photos/38630/bodybuilder-weight-training-stress-38630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "https://images.pexels.com/photos/1480520/pexels-photo-1480520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "https://images.pexels.com/photos/1480520/pexels-photo-1480520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://pbs.twimg.com/media/EW9HHNRWsAA4_lz.jpg"
       ],
       timer: null,
       currentIndex: 0
