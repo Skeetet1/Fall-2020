@@ -10,7 +10,8 @@
           Where We Work Now and Flex Later
         </h2>
   
-
+          <center><router-link to="/signup">
+    <button  class="button , is-danger">Get Started</button></router-link></center>
         
       </div>
 
@@ -37,6 +38,10 @@ export default {
    
   }
   
+  .button{
+    margin-top: 100px;
+    
+  }
   .hero {    
     text-align: center;
     background-image: url("../assets/weights.jpg");
