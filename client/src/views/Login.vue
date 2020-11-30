@@ -7,6 +7,8 @@
 
 
     <form>
+
+        
         <div class="field">
         <p class="control has-icons-left has-icons-right">
             <input class="input" type="email" placeholder="Email">
@@ -28,12 +30,14 @@
         </div>
         <div class="field">
         <p class="control">
+          
             <button class="button is-success" @click.prevent="login">
             Login
             </button>
             <button class="button is-primary" @click.prevent="fbLogin">
             FB Login
             </button>
+
             <button class="button is-warning" @click.prevent="googleLogin">
             Google Login
             </button>
@@ -67,7 +71,7 @@ export default {
                         handle: x.email,
                         profile: x.picture.data.url
                     }
-                    session.addNotification('Yay! You logged in', 'success')
+                    session.addNotification('Welcome you are Logged in', 'success')
                     this.$router.push('feed')
                     console.log(x)
                 }  )
@@ -83,7 +87,7 @@ export default {
                         handle: profile.getEmail(),
                         profile: profile.getImageUrl()
                     }
-                    session.addNotification('Yay! You logged in', 'success')
+                    session.addNotification('Welcome you are Logged in', 'success')
                     this.$router.push('feed')
         }
     }
@@ -92,7 +96,7 @@ export default {
 //  Load facebook scripts
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '864177661004843',
+      appId      : '691764664810166',
       cookie     : true,
       xfbml      : true,
       version    : 'v9.0'
@@ -101,6 +105,7 @@ export default {
     FB.AppEvents.logPageView();   
       
   };
+
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -117,7 +122,7 @@ export default {
             // the global gapi variable is created by loading that script
             gapi.load('auth2', () => {
                 auth2 = gapi.auth2.init({
-                    client_id: "69162742167-oo4oe777cjfues67332npkpss244ktga.apps.googleusercontent.com",
+                    client_id: "186071146720-v2hmdejl8d8ummn5gcun9880gibg0pqq.apps.googleusercontent.com",
                     cookiepolicy: 'single_host_origin',
                     scope: 'profile email'
                 })
