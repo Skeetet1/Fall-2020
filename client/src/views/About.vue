@@ -1,7 +1,23 @@
 
 <template>
-
 <div>
+ <b-field label="Find a JS framework">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="filteredDataArray"
+                placeholder="Username"
+                icon="magnify"
+                clearable
+                @select="option => selected = option">
+                <template slot="empty">No results found</template>
+            </b-autocomplete>
+        </b-field>
+
+
+
+
+
  <div class= "about">
   <p align ="center" class="dotted"> 
     <i class="fas fa-dumbbell"></i>

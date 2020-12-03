@@ -260,7 +260,8 @@
  
 <div class=" fieldsplacement ">
   <div class="control">
-  <button class="button is-primary">Submit</button>
+  <button v-on:click="submitBut " class="button is-primary" > 
+    Submit</button>
   </div>
 </div>
 
@@ -295,6 +296,14 @@
 
 <script>
 export default {
-  
+  data() {
+            return {
+                data: [
+                    
+                ],
+                name: '',
+                selected: null
+            }
+}
 }
 </script>
