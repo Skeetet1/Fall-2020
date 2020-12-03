@@ -85,6 +85,22 @@ export default {
     }
   }
 };
+
+
+ async created()
+        {
+           this.data = await getexercisetypesname();
+        },
+        computed: {
+            filteredDataArray() {
+                return this.data.filter((option) => {
+                    return option.Users_Types_Name
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                })
+            }
+        }
 </script>
 
 <style>
