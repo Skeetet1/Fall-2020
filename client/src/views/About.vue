@@ -1,7 +1,7 @@
 
 <template>
 <div>
- <b-field label="Find a JS framework">
+ <b-field label="Search Users">
             <b-autocomplete
                 rounded
                 v-model="name"
